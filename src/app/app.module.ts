@@ -37,7 +37,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     NavbarComponent,
     MainComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
     FilterPipe
 
   ],
