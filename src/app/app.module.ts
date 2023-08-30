@@ -12,7 +12,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 //create Enviroment
-import { environment } from '../environments/environment';
+// import { environment } from '../environments/environment';
 
 // import { DataTablesModule } from "angular-datatables";
 
@@ -28,6 +28,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+//firebase
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule,
     NgModule,
     FormsModule,
+    provideFunctions(() => getFunctions()),
+    provideRemoteConfig(() => getRemoteConfig()),
+    provideStorage(() => getStorage()),
     // DataTablesModule
   ],
   providers: [],
