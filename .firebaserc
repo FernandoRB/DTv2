@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dtv2-51772"
+  },
+  "targets": {
+    "dtv2-51772": {
+      "hosting": {
+        "DTv2": [
+          "dtv2-51772"
+        ]
+      }
+    }
   }
 }
